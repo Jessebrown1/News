@@ -5,6 +5,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     box-sizing: border-box;
+    width: 100%;
 
 }
 
@@ -71,12 +72,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    padding: 15px 20px;
     background: linear-gradient(90deg, white,#6d30084f, #f8f8ff);
     position: relative;
     z-index: 100;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     list-style-type: none;
+    flex-wrap: wrap;
 }
 
 
@@ -109,8 +111,8 @@ header {
 
 .nav-links {
     display: flex;
-    gap: 30px;
-    margin-left: 45%;
+    gap: 15px;
+    margin-left: auto;
 }
 
 .jr {
@@ -181,10 +183,12 @@ header {
 .hero {
     display: flex;
     align-items: center;
-    height: 100vh;
-    padding: 0 80px;
+    height: auto;
+    padding: 40px 10%;
     background: none;
     justify-content: center;
+    text-align: center;
+    flex-direction: column;
 }
 
 .hero-content {
@@ -221,15 +225,16 @@ header {
 
 .welcome-message {
     font-family: 'Cairo', sans-serif;
-    font-size: 70px;
+    font-size: 50px;
     color: #ff6700;
     animation: fadeIn 2s ease-out;
     white-space: nowrap;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .sub-message {
-    font-size: 30px;
+    font-size: 20px;
     color: #f7f7f7;
     line-height: 1.6;
     margin-top: 40px;
@@ -675,5 +680,76 @@ html {
     }
     .main-content {
         padding-right: 0;
+    }
+}
+
+
+
+
+@media (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links {
+        margin: 10px 0;
+    }
+    .hero {
+        padding: 20px;
+    }
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .main-content {
+        margin-right: 0;
+    }
+    .trending-item {
+        width: 100%;
+    }
+    .navbar {
+        padding: 10px;
+    }
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    .hero {
+        padding: 10px;
+    }
+    .welcome-message {
+        font-size: 36px;
+    }
+    .sub-message {
+        font-size: 18px;
+    }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+    .welcome-message {
+        font-size: 28px;
+    }
+    .sub-message {
+        font-size: 16px;
+    }
+    .btn {
+        padding: 8px;
+        font-size: 12px;
+    }
+    .input[type="text"] {
+        width: 100%;
     }
 }
