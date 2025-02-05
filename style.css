@@ -22,9 +22,8 @@ header {
 .categories-container {
     display: flex;
     align-items: center;
- /* Add space between header and categories */
     padding: 8px 20px;
-    border-bottom: 1px solid #ccc; /* Optional: Add a divider */
+    border-bottom: 1px solid #ccc; 
     background-color: #f8f8ff;
     margin: 0%;
 }
@@ -75,15 +74,16 @@ header {
     padding: 15px 20px;
     background: linear-gradient(90deg, white,#6d30084f, #f8f8ff);
     position: relative;
-    z-index: 100;
+    z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     list-style-type: none;
     flex-wrap: wrap;
+    margin: 0%;
 }
 
 
 
-/* From Uiverse.io by chethan025 */ 
+
 .input[type="text"] {
     display: block;
     color: rgb(34, 34, 34);
@@ -435,17 +435,28 @@ html {
   }
 
   .login-box {
-    position: absolute;
+    position: fixed; 
     top: 50%;
     left: 50%;
-    width: 400px;
-    padding: 40px;
-    transform: translate(-50%, -50%);
-    background: rgba(0,0,0,.5);
+    width: 90%; 
+    max-width: 400px; 
+    padding: 20px;
+    transform: translate(-50%, -50%); 
+    background: rgba(0, 0, 0, 0.7); 
     box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
     border-radius: 10px;
-  }
+    z-index: 1000; 
+}
+
+
+@media (max-width: 480px) {
+    .login-box {
+        padding: 15px; 
+    }
+}
+
+
   
   .login-box h2 {
     margin: 0 0 30px;
@@ -737,7 +748,7 @@ html {
     }
 }
 
-/* Small Phones */
+
 @media (max-width: 480px) {
     .welcome-message {
         font-size: 28px;
@@ -753,3 +764,105 @@ html {
         width: 100%;
     }
 }
+
+
+
+
+
+.form-container {
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    margin: 0 auto;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+}
+
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 15px; 
+        width: 90%; 
+        max-width: none; 
+    }
+}
+
+h2 {
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    color: #333333;
+
+}
+
+form label {
+
+    display: block;
+
+    margin: 10px 0 5px;
+
+    color: #555555;
+
+}
+
+form input, form textarea {
+
+    width: 100%;
+
+    padding: 10px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #cccccc;
+
+    border-radius: 5px;
+
+}
+
+form button {
+
+    width: 100%;
+
+    background-color: #007BFF;
+
+    color: white;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+}
+
+form button:hover {
+
+    background-color: #0056b3;
+
+}                                         
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
